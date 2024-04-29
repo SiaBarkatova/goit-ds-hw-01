@@ -21,7 +21,7 @@ class Name(Field):
 
 class Phone(Field):
     def __init__(self, phone):
-        pattern = '^\d{10}$' # the phone must be 10 digits
+        pattern = r'^\d{10}$' # the phone must be 10 digits
         is_phone = re.match(pattern, phone)
  
         if not is_phone:
